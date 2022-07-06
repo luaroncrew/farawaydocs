@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://farswap.org/sitemap.xml.gz
+Sitemap: https://luaroncrew.github.io/farawaydocs/sitemap.xml.gz
