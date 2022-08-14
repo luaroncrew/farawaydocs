@@ -2,13 +2,29 @@ input: .
 output: .retype
 url: https://luaroncrew.github.io/farawaydocs/
 branding:
-  title: Far Away 🐉
+  title: Far Away
+  colors:
+    label:
+      text: "#FF38FF"
   label: Docs
+  logo: images/favicon.svg
 links:
 - text: twitter
   link: https://twitter.com/FarawaySwap
+  icon: broadcast
+
 - text: discord
   link: https://t.co/pBgdRoaPkM
-  
+  icon: bell
+
+- text: testnet application
+  link: https://www.farswap.org/reimagine-your-world
+  icon: browser
+
+- text: home page
+  link: https://www.farswap.org/
+  icon: home
+favicon: images/favicon.svg
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+

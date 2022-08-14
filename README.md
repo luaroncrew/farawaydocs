@@ -1,22 +1,26 @@
+# Overview
 
-# Far Away Docs 🐉
---- 
+## What is Far Away Swap?
+Far Away Swap is a decentralized exchange platform with integrated liquidity aggregator
+built on NEAR blockchain.
 
-## What is Far Away Swap
-Far Away Swap is a decentralized exchange platform
-built on NEAR blockchain. We use liquidity pools 
-and order-books for these exchanges. 
-That means, the application allows to
-change any presented pair of crypto assets with no
-intermediaries. Far Away Swap implements a new 
-**combined swap** algorithm
+### Just another DEX? Not we're better, see why:
+There are two key things to know about Far Away Swap:
+- we implement the new [combined swap](#combined-swap-algorithm) algorithm 
+that increases the capital 
+efficiency and consequently gives you more profit when you execute the swaps.
+
+- we aggregate liquidity of other leading DEXs of the ecosystem, trying to give you the best prices
+
 
 --- 
 
 ## Main features
-- **Order book** swap / limit order
-- **Liquidity pool** swap / provide
-- **Combined swap**
+#### With Far Away Swap you can do financial operations like:
+- Limit orders
+- Market orders
+- Provide liquidity in our pools
+
 
  ---
 ## Combined Swap Algorithm
@@ -24,7 +28,7 @@ intermediaries. Far Away Swap implements a new
 ### How it works?
 When swapping, **one part of assets is being
 swapped in
-the order book and another part in the liquidity pool**
+the order book and another part in the liquidity pool** meaning one part of exchange is P2P.
 
 ![](/images/combined_swap.png)
 
@@ -33,14 +37,14 @@ Which part of tokens is swapped in pool? It is always different.
 In next paragraphs we will call it
 "pool rate".
 
-```pool_rateo = tokens_we_swap_in_pool / total_volume_of_swap```
+```pool_rate = volume_swaped_in_pool / total_volume_of_swap```
 
 ![](/images/pool_rate.png)
 
 It depends on the total number of
 assets presented for the pair in both liquidity pool and
 order book. In order to choose the best pool
-rate, we use a predictive model based on our [researches](Researches.md).
+rate, we will use a predictive model based on our [researches](researches.md).
 
 ---
 
@@ -65,4 +69,4 @@ These problems could be solved by
 implementing both models at the same time
 (Combined Swap Algorithm)
 as their advantages perfectly complete 
-their disadvantages ([check researches](Researches.md)).
+their disadvantages ([check researches](researches.md)).
