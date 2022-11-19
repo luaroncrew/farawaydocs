@@ -2,15 +2,15 @@ input: .
 output: .retype
 url: https://luaroncrew.github.io/farawaydocs/
 branding:
-  title: Far Away
+  title: fardocs
   colors:
     label:
       text: "#FF38FF"
-  label: Docs
+  label: testnet v1
   logo: images/favicon.svg
 links:
 - text: twitter
-  link: https://twitter.com/FarawaySwap
+  link: https://twitter.com/far_swap
   icon: broadcast
 
 - text: discord
@@ -18,7 +18,7 @@ links:
   icon: bell
 
 - text: testnet application
-  link: https://www.farswap.org/reimagine-your-world
+  link: https://testnet.farswap.org/
   icon: browser
 
 - text: home page

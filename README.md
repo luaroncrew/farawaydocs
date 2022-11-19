@@ -1,50 +1,60 @@
 # Overview
 
-## What is Far Away Swap?
-Far Away Swap is a decentralized exchange platform with integrated liquidity aggregator
+## What is farswap?
+farswap is a decentralized exchange platform with integrated liquidity aggregator
 built on NEAR blockchain.
 
-### Just another DEX? Not we're better, see why:
-There are two key things to know about Far Away Swap:
-- we implement the new [combined swap](#combined-swap-algorithm) algorithm 
-that increases the capital 
-efficiency and consequently gives you more profit when you execute the swaps.
+### Just another DEX? Not we're better:
+There is a key thing to know about farswap:
 
-- we aggregate liquidity of other leading DEXs of the ecosystem, trying to give you the best prices
+farswap implements the new [combined swap](#Combined-Swap) market making model
+that makes markets more liquid and consequently gives you more profit when you execute the swaps.
+efficiency and consequently provides you:
+- lower prices
+- lower fees
+- fast trading experience
+---
 
+## Combined Swap
+Combined swap can be imagined as order-books working on top of liquidity pools
 
---- 
+### Why it works?
+farswap order books, built on top of pools, make illiquid pairs liquid by concentrating way more liquidity around the
+market price. Consequently, trades become more profitable as order books reduce
+the slippage and the fees. Combined swap is very fast,
+since we use mathematical models instead of computing values on the blockchain.
 
-## Main features
-#### With Far Away Swap you can do financial operations like:
-- Limit orders
-- Market orders
-- Provide liquidity in our pools
+Combined swap is better than just a liquidity-pool-based exchange,
+as we have an additional liquidity in farswap order books,
+well concentrated around the market price.
+Also, Combined swap is better than just an order book,
+since we can use the liquidity of the existing pools along
+with the liquidity in farswap order books to provide better prices.
 
+example:
 
- ---
-## Combined Swap Algorithm
+![](/images/pool_plus_order_book.png)
 
-### How it works?
-When swapping, **one part of assets is being
-swapped in
-the order book and another part in the liquidity pool** meaning one part of exchange is P2P.
+### Implementation
+When swapping, one part of assets is being
+swapped in the order book and another is in liquidity pool.
 
 ![](/images/combined_swap.png)
+
 
 #### Pool rate
 Which part of tokens is swapped in pool? It is always different.
 In next paragraphs we will call it
 "pool rate".
 
-```pool_rate = volume_swaped_in_pool / total_volume_of_swap```
+```pool_rate = volume_to_swap_in_pool / total_volume_of_swap```
 
 ![](/images/pool_rate.png)
 
 It depends on the total number of
 assets presented for the pair in both liquidity pool and
 order book. In order to choose the best pool
-rate, we will use a predictive model based on our [researches](researches.md).
+rate, we will use a predictive models based on our [researches](researches.md).
 
 ---
 
@@ -65,8 +75,5 @@ certain trading pair. The liquidity pool
 needs to be 100x greater than the size 
 of the order to keep the slippage rate under 1\%
 
-These problems could be solved by
-implementing both models at the same time
-(Combined Swap Algorithm)
-as their advantages perfectly complete 
-their disadvantages ([check researches](researches.md)).
+These problems cause a liquidity lack on the market. At farswap we believe that with the combined swap, even 
+shitcoins will be liquid.
