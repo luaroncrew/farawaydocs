@@ -9,10 +9,11 @@ There is a key thing to know about farswap:
 
 farswap implements the new [combined swap](#Combined-Swap) market making model
 that makes markets more liquid and consequently gives you more profit when you execute the swaps.
-efficiency and consequently provides you:
-- lower prices
-- lower fees
-- fast trading experience
+
+Combined swap can 
+- reduce price slippage
+- reduce fees
+- provide a very fast trading experience
 ---
 
 ## Combined Swap
